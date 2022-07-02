@@ -1,0 +1,76 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {% block  title %}   {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+</head>
+<body>
+   <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-success fixed-top">
+          <div class="container">
+              <a class="navbar-brand mr-4" href="/">mobilepe Imnformation</a>
+
+              <button type="button" class="navbar-toggler" data-target="#navbarToggle"
+                      data-toggle="collapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div id="navbarToggle" class="collapse navbar-collapse">
+                  <!-- Navbar Left Side Menus -->
+                  <div class="navbar-nav mr-auto">
+                      <a class="nav-item nav-link" href="{% url 'blog_home' %}">Home</a>
+                      <a class="nav-item nav-link" href="{% url 'blog_about' %}">About</a>
+                      
+                  </div>
+                  <!-- Navbar Right Side Menus -->
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#">Login</a>
+                      <a class="nav-item nav-link" href="#">Register</a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+   </header>
+
+   <main class="container">
+      <div class="row">
+          <div class="col-md-8">
+              {% block  body %}
+
+              {% endblock %}
+          </div>
+
+          <div class="col-md-4 content-section">
+             <h3> Display Information</h3>
+              <p class="text-danger">you can put any information here to display</p>
+              <ul class="list-group">
+                  <li class="list-group-item list-group-item-success">
+                      <a href="#">Latest Posts</a></li>
+                  <li class="list-group-item list-group-item-danger">
+                      <a href="#"> Enqury</a></li>
+                  <li class="list-group-item list-group-item-primary">
+                      <a href="#"> electronic item  information</a></li>
+                  <li class="list-group-item list-group-item-warning">
+                      <a href="#"> food item or dress information</a></li>
+              </ul>
+          </div>
+      </div>
+   </main>
+
+   <footer>
+       created by <b>ankur</b>. Copy rights &copy; ankur
+   </footer>
+</body>
+</html>

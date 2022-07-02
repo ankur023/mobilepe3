@@ -1,0 +1,22 @@
+body{
+    background-color: greenyellow;
+    margin-top: 100px;
+}
+
+.content-section{
+    border: 1px solid blue;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white
+}
+
+footer{
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
